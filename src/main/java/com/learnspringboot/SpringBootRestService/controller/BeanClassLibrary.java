@@ -6,8 +6,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="LibraryDemo")
-public class Library {
+@Table(name="Storage2")
+public class BeanClassLibrary {
 
 @Column(name="book_name")
  private String book_name;
