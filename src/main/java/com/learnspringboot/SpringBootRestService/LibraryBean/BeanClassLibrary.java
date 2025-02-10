@@ -1,4 +1,4 @@
-package com.learnspringboot.SpringBootRestService.controller;
+package com.learnspringboot.SpringBootRestService.LibraryBean;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

@@ -1,4 +1,4 @@
-package com.learnspringboot.SpringBootRestService.controller;
+package com.learnspringboot.SpringBootRestService.GreetingsExample;
 
 import org.springframework.stereotype.Component;
 

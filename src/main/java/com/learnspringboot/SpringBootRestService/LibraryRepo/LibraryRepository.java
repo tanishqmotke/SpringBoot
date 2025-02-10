@@ -1,8 +1,8 @@
-package com.learnspringboot.SpringBootRestService.library;
+package com.learnspringboot.SpringBootRestService.LibraryRepo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.learnspringboot.SpringBootRestService.controller.BeanClassLibrary;
+import com.learnspringboot.SpringBootRestService.LibraryBean.BeanClassLibrary;
 
 public interface LibraryRepository extends JpaRepository<BeanClassLibrary,String>{
 
