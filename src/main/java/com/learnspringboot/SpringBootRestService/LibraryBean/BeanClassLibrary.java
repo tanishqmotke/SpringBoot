@@ -5,7 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Entity
+@Entity //JPA will know that this is the class that is need to map to the database.
 @Table(name="Storage2")
 public class BeanClassLibrary {
 
