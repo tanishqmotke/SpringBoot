@@ -13,4 +13,4 @@ CREATE TABLE LibraryDemo (
 INSERT INTO LibraryDemo(book_name,id,isbn,aisle,author) values("Appium","fdsefr343","fdsefr3","43","Rahul Shetty");
 select * from Storage2 where id="fdsefr343";
 ALTER TABLE LibraryDemo RENAME TO Storage2;
-select * from Storage2
+select * from Storage2;

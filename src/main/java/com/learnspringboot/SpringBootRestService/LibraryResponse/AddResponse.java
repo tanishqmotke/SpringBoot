@@ -1,5 +1,8 @@
 package com.learnspringboot.SpringBootRestService.LibraryResponse;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class AddResponse {
 
   private String msg;
