@@ -7,5 +7,5 @@ import com.learnspringboot.SpringBootRestService.LibraryBean.BeanClassLibrary;
 
 @Repository
 public interface LibraryRepository extends LibraryCustomInterface,JpaRepository <BeanClassLibrary,String>{
-
+ 
 }

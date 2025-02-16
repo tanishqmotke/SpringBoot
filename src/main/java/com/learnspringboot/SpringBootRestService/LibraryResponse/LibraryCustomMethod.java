@@ -25,4 +25,13 @@ public class LibraryCustomMethod implements LibraryCustomInterface {
         return bookswithAuthor;
     }
 
+    //@Override
+    public List<BeanClassLibrary> findAllBook(){
+     List<BeanClassLibrary> allBooks = new ArrayList<>();
+     List<BeanClassLibrary> books = repo.findAll();
+     for(BeanClassLibrary item:books){
+        allBooks.add(item);
+     }
+     return allBooks;
+    }
 }

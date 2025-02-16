@@ -86,9 +86,9 @@ public class LibraryController {
         return new ResponseEntity<>("Book is Deleted",HttpStatus.CREATED);
     }
 
-    @GetMapping("/getBooks")
+   /*  @GetMapping("/GetAllBooks")
     public List<BeanClassLibrary> getAllBooks(){
-        return librepo.findAllBooks();
+        return librepo.findAllBook();
         
-    }
+    } */
 }
