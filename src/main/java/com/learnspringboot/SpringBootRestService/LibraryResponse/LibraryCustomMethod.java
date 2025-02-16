@@ -23,9 +23,6 @@ public class LibraryCustomMethod implements LibraryCustomInterface {
         }
     }
         return bookswithAuthor;
-    
     }
-   
-
 
 }
