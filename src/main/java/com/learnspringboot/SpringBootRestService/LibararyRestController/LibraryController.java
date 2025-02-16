@@ -72,9 +72,15 @@ public class LibraryController {
        existingbook.setAuthor(beanlib.getAuthor());
        existingbook.setBook_name(beanlib.getBook_name());
        librepo.save(existingbook);
-       return new ResponseEntity<BeanClassLibrary>(existingbook,HttpStatus.OK);
+       return new ResponseEntity(existingbook,HttpStatus.OK);
         
     }
     
+    @PostMapping("/resource/deleteBook")
+    public void DeleteBook(@RequestBody BeanClassLibrary beanlib)
+    {
 
+        BeanClassLibrary bookDetails = librepo.findById(beanlib.getId()).get();
+        
+    }
 }
