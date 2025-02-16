@@ -1,5 +1,7 @@
 package com.learnspringboot.SpringBootRestService.LibararyRestController;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -55,8 +57,11 @@ public class LibraryController {
     }catch(Exception e){
         throw new ResponseStatusException(HttpStatus.NOT_FOUND);
     }
-
 }
+    @GetMapping("/GetBooks/author")
+    public List<BeanClassLibrary> getBookByAuthor(@RequestParam(value="authorname")String authorname){
+        return librepo.findAllByAuthor(authorname);
+    }
     
 
 }
