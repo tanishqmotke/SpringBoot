@@ -78,12 +78,17 @@ public class LibraryController {
         
     }
     
-    @DeleteMapping("/resource/deleteBook")
+    @DeleteMapping("/deleteBook")
     public ResponseEntity<String> DeleteBook(@RequestBody BeanClassLibrary beanlib)
     {
-
         BeanClassLibrary booktoDelete = librepo.findById(beanlib.getId()).get();
         librepo.delete(booktoDelete);
         return new ResponseEntity<>("Book is Deleted",HttpStatus.CREATED);
+    }
+
+    @GetMapping("/getBooks")
+    public List<BeanClassLibrary> getAllBooks(){
+        return librepo.findAllBooks();
+        
     }
 }
