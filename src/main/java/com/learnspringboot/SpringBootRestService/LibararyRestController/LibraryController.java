@@ -70,7 +70,8 @@ public class LibraryController {
        BeanClassLibrary existingbook = librepo.findById(id).get();
        existingbook.setAisle(beanlib.getAisle());
        existingbook.setAuthor(beanlib.getAuthor());
-       librepo.save(beanlib);
+       existingbook.setBook_name(beanlib.getBook_name());
+       librepo.save(existingbook);
        return new ResponseEntity<BeanClassLibrary>(existingbook,HttpStatus.OK);
         
     }
