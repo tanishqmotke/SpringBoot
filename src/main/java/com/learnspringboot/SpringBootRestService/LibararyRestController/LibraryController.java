@@ -17,6 +17,8 @@ import com.learnspringboot.SpringBootRestService.LibraryRepo.LibraryRepository;
 import com.learnspringboot.SpringBootRestService.LibraryResponse.AddResponse;
 //import com.learnspringboot.SpringBootRestService.service.LibraryService;
 import com.learnspringboot.SpringBootRestService.service.LibraryService;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -76,11 +78,12 @@ public class LibraryController {
         
     }
     
-    @PostMapping("/resource/deleteBook")
-    public void DeleteBook(@RequestBody BeanClassLibrary beanlib)
+    @DeleteMapping("/resource/deleteBook")
+    public ResponseEntity<String> DeleteBook(@RequestBody BeanClassLibrary beanlib)
     {
 
-        BeanClassLibrary bookDetails = librepo.findById(beanlib.getId()).get();
-        
+        BeanClassLibrary booktoDelete = librepo.findById(beanlib.getId()).get();
+        librepo.delete(booktoDelete);
+        return new ResponseEntity<>("Book is Deleted",HttpStatus.CREATED);
     }
 }
